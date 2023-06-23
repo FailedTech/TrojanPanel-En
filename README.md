@@ -1,30 +1,22 @@
 # Trojan Panel
 
-支持Xray/Trojan-Go/Hysteria/NaiveProxy的多用户Web管理面板
+Multi-user web administration panel supporting Xray/Trojan-Go/Hysteria/NaiveProxy
 
 # System Requirements
 
-系统支持: CentOS 7+/Ubuntu 18+/Debian 10+
+System Support: CentOS 7+/Ubuntu 18+/Debian 10+
 
-处理器架构: `linux/amd64` `liunx/arm/v6` `linux/arm/v7` `linux/arm64` `linux/s390x`
+Processor architecture: `linux/amd64` `liunx/arm/v6` `linux/arm/v7` `linux/arm64` `linux/s390x`
 
-内存要求: ≥1G
+Memory requirements: ≥1G
 
 # Quick installation
 
-1. 联机版（推荐）
+1. Install 
 
 ```shell
 source <(curl -L https://github.com/trojanpanel/install-script/raw/main/install_script.sh)
 ```
-
-2. 单机版
-
-```shell
-source <(curl -L https://github.com/trojanpanel/install-script/raw/main/install_script_standalone.sh)
-```
-
-3. [安装旧版](./archive)
 
 # Enjoy!
 
@@ -32,7 +24,7 @@ source <(curl -L https://github.com/trojanpanel/install-script/raw/main/install_
 
 # Features
 
-[使用教程](https://trojanpanel.github.io/tutorial/using-tutorials.html)
+[Tutorial](https://trojanpanel.github.io/tutorial/using-tutorials.html)
 
 # Documentation
 
@@ -53,6 +45,7 @@ source <(curl -L https://github.com/trojanpanel/install-script/raw/main/install_
 - [Xray-core](https://github.com/XTLS/Xray-core)
 - [hysteria](https://github.com/HyNetwork/hysteria)
 - [naiveproxy](https://github.com/klzgrad/naiveproxy)
+- [jonssonyan](https://github.com/trojanpanel)
 
 ## Stargazers over time
 
