@@ -15,7 +15,7 @@ Memory requirements: ≥1G
 1. Install 
 
 ```shell
-source <(curl -L https://github.com/trojanpanel/install-script/raw/main/install_script.sh)
+source <(curl -L https://raw.githubusercontent.com/FailedTech/TrojanPanel-En/main/install_script.sh)
 ```
 
 # Enjoy!
