@@ -958,7 +958,7 @@ install_trojan_panel_ui() {
   if [[ -z $(docker ps -a -q -f "name=^trojan-panel-ui$") ]]; then
     echo_content green "---> Install Trojan Panel Frontend"
 
-    read -r -p "Enter Trojan Panel Backend's IP address(default:local backend): " trojan_panel_ip
+    read -r -p "Enter Trojan Panel Backend's IP address(default:localhost): " trojan_panel_ip
     [[ -z "${trojan_panel_ip}" ]] && trojan_panel_ip="127.0.0.1"
     read -r -p "Enter Trojan Panel Backend's service port(default:8081): " trojan_panel_server_port
     [[ -z "${trojan_panel_server_port}" ]] && trojan_panel_server_port=8081
@@ -1077,7 +1077,7 @@ install_trojan_panel() {
     read -r -p "Enter Trojan Panel Backend's service port(default:8081): " trojan_panel_port
     [[ -z "${trojan_panel_port}" ]] && trojan_panel_port=8081
 
-    read -r -p "Enter database's IP address(default:localdatabase): " mariadb_ip
+    read -r -p "Enter database's IP address(default:local database): " mariadb_ip
     [[ -z "${mariadb_ip}" ]] && mariadb_ip="127.0.0.1"
     read -r -p "Enter database's port(default:9507): " mariadb_port
     [[ -z "${mariadb_port}" ]] && mariadb_port=9507
@@ -1093,7 +1093,7 @@ install_trojan_panel() {
 
     docker exec trojan-panel-mariadb mysql -h"${mariadb_ip}" -P"${mariadb_port}" -u"${mariadb_user}" -p"${mariadb_pas}" -e "create database if not exists trojan_panel_db;" &>/dev/null
 
-    read -r -p "Enter Redis's IP address(default:localRedis): " redis_host
+    read -r -p "Enter Redis's IP address(default:local Redis): " redis_host
     [[ -z "${redis_host}" ]] && redis_host="127.0.0.1"
     read -r -p "Enter Redis's port(default:6378): " redis_port
     [[ -z "${redis_port}" ]] && redis_port=6378
@@ -1152,7 +1152,7 @@ install_trojan_panel_core() {
     read -r -p "Enter Trojan Panel Core's service port(default:8082): " trojan_panel_core_port
     [[ -z "${trojan_panel_core_port}" ]] && trojan_panel_core_port=8082
 
-    read -r -p "Enter database's IP address(default:localdatabase): " mariadb_ip
+    read -r -p "Enter database's IP address(default:local database): " mariadb_ip
     [[ -z "${mariadb_ip}" ]] && mariadb_ip="127.0.0.1"
     read -r -p "Enter database's port(default:9507): " mariadb_port
     [[ -z "${mariadb_port}" ]] && mariadb_port=9507
@@ -1676,7 +1676,7 @@ redis_flush_all() {
 
   echo_content green "---> Refresh Redis cache"
 
-  read -r -p "Enter Redis's IP address(default:localRedis): " redis_host
+  read -r -p "Enter Redis's IP address(default:local Redis): " redis_host
   [[ -z "${redis_host}" ]] && redis_host="127.0.0.1"
   read -r -p "Enter Redis's port(default:6378): " redis_port
   [[ -z "${redis_port}" ]] && redis_port=6378
@@ -1759,7 +1759,7 @@ forget_pass() {
       ;;
     3)
       if [[ -n $(docker ps -a -q -f "name=^trojan-panel-mariadb$") ]]; then
-        read -r -p "Enter database's IP address(default:localdatabase): " mariadb_ip
+        read -r -p "Enter database's IP address(default:local database): " mariadb_ip
         [[ -z "${mariadb_ip}" ]] && mariadb_ip="127.0.0.1"
         read -r -p "Enter database's port(default:9507): " mariadb_port
         [[ -z "${mariadb_port}" ]] && mariadb_port=9507
