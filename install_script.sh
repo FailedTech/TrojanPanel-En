@@ -833,8 +833,8 @@ install_cert() {
     echo_content green "---> Set up certificate"
 
     while :; do
-      echo_content yellow "1. Install Caddy 2（Auto certificate）"
-      echo_content yellow "2. Manual set up certificate"
+      echo_content yellow "1. Install Caddy 2(Auto Certificate)"
+      echo_content yellow "2. Manual set up Certificate"
       echo_content yellow "3. Not set"
       read -r -p "Choose (default:1): " whether_install_cert
       [[ -z "${whether_install_cert}" ]] && whether_install_cert=1
